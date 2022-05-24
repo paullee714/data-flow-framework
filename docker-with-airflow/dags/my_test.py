@@ -9,7 +9,10 @@ default_args = {
 }
 
 dag = DAG(
-    "firstDAG_test", default_args=default_args, schedule_interval="@once", tags=["wool"]
+    "firstDAG_test",
+    default_args=default_args,
+    schedule_interval="@once",
+    tags=["wool"],
 )
 
 
