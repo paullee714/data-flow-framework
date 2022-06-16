@@ -11,7 +11,15 @@
 - 개발환경 세팅하기
     - java 설치
         ```shell
-        brew install adoptopenjdk8
+        brew install --cask adoptopenjdk8
+        ```
+    - scala 설치
+        ```shell
+        brew install scala
+        ```
+    - apahce-spark 설치
+        ```shell
+        brew install apache-spark
         ```
     - python 설치
         ```shell
