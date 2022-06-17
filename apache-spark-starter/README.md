@@ -4,7 +4,10 @@
 
 
 ## 목차
-[Uber Trip Sample with Spark](./example/count_trip/)
+[1. Uber Trip Sample with Spark](./example/count_trip/)
+    - 아파치 스파크를 활용한 뉴욕 정부에서 제공한 우버트립데이터를 간단히 분석
+    - 간단한 샘플코드로 스파크를 실행 할 수 있게 코드생성
+
 
 
 ## 개발환경
