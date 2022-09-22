@@ -44,9 +44,9 @@
 - airflow 실행 전, airflow.cfg 파일을 수정 해 준다.
 - airflow를 설치했다면, home 디렉터리에 생성이 되었을텐데, 나는 맥 m1에 설치했기 때문에 경로는 `~/airflow` 에 있다
 - 해당하는 디렉터리에서 `airflow.cfg` 파일을 수정해 준다.
-- 위에 설정한 `POSTGRES_PASSWORD`, `POSTGRES_USER`, `POSTGRES_DB`를 airflow에 아래와 같이 넣어준다
-    - sql_alchemy_conn = postgresql+psycopg2://admin:admin@localhost/airflow
-    - result_backend = db+postgresql://admin:admin@localhost/airflow
+- 위에 설정한 `POSTGRES_PASSWORD`, `POSTGRES_USER`, `POSTGRES_DB`를 airflow의 설정값을 찾아 아래와 같이 넣어준다
+    - `sql_alchemy_conn = postgresql+psycopg2://admin:admin@localhost/airflow`
+    - `result_backend = db+postgresql://admin:admin@localhost/airflow`
 
 ### 에러가나는데요?
 - psycopg2를 설치해 준다
@@ -62,6 +62,15 @@
     ```shell
     $ airflow db init
     ```
+
+- airflow 유저생성
+    ```shell
+    $ airflow users create \
+        --username admin \
+        --firstname admin \
+        --lastname admin \
+        --role Admin \
+        --email admin@mail.com
 
 - airflow scheduler 실행
     ```shell
